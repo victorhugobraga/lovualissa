@@ -122,16 +122,16 @@ export default function Home() {
   ];
 
   return (
-    <main className="p-5">
+    <main className="p-3">
       <h1>Lov U Alissa</h1>
-      <div className="flex flex-col min-h-screen py-2 w-max">
-        <div className="flex flex-wrap justify-around max-w-4xl mt-6 sm:w-full">
+      <div className="flex flex-col py-2">
+        <div className="flex flex-wrap justify-around mt-6 sm:w-full">
           {frasesJson.map((frase) => (
             <div
               className="p-2 m-2 bg-pink-800 rounded-xl shadow-md hover:shadow-lg"
               key={frase.cantadas[0].titulo}
             >
-              <h2 className="text-xl font-bold text-center">
+              <h2 className="text-xl font-bold text-center mb-5">
                 {frase.categoria}
               </h2>
               <div className="flex flex-col gap-4">
@@ -152,8 +152,10 @@ export default function Home() {
       </div>
 
       {modal && modalContent.description && (
-        <div className="bg-red-900 fixed top-1/2 left-1/2 -translate-x-1/2 p-4 w-[80vw] rounded-lg flex gap-4 flex-col z-10">
-          <h2 className="text-center text-lg">{modalContent.title}</h2>
+        <div className="bg-pink-700 fixed top-1/2 left-1/2 -translate-x-1/2 p-4 w-[80vw] rounded-lg flex gap-4 flex-col z-10">
+          <h2 className="text-center text-lg font-bold">
+            {modalContent.title}
+          </h2>
           <p>{modalContent.description}</p>
         </div>
       )}
